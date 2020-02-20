@@ -105,7 +105,7 @@ jobs:
       uses: actions/upload-artifact@master
       if: steps.compile.outputs.status == 'success' && env.UPLOAD_BIN_DIR == 'true'
       with:
-        name: OpenWrt_directory
+        name: qihoo-c301_directory
         path: openwrt/bin
 
     - name: Organize files
@@ -121,5 +121,5 @@ jobs:
       uses: actions/upload-artifact@master
       if: steps.organize.outputs.status == 'success' && !cancelled()
       with:
-        name: OpenWrt_firmware
+        name: qihoo-c301_firmware
         path: ${{ env.FIRMWARE }}
